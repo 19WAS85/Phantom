@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <head>
+        <title>Phantom: Easy reflection in .NET</title>
+        <style type="text/css">
+            * { margin: 0px; padding: 0px; }
+            body { font-family: GillSans, Calibri, Trebuchet, sans-serif; }
+            #content { margin-left: 20px; }
+            h1, h2, h3 { margin: 20px 0 0; color: #035; }
+            p { margin: 10px; }
+            pre, #footer { border: 1px solid #BBB; background-color: #EEF; padding: 10px; margin: 10px 20px; color: #030; font-family: Consolas, 'Andale Mono', 'Lucida Console', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Monaco, 'Courier New', monospace; font-size: 10pt; }
+            #footer { text-align: center; }
+        </style>
+    </head>
+    <body>
+        <div id="content">
+
+<h1>Phantom: Easy reflection in .<span class="caps">NET</span></h1>
+<p>Phantom is a helper for use relfection in Microsoft.<span class="caps">NET</span>.</p>
+<h2>How to use it?</h2>
+<p>For begin to use <strong>Phantom</strong> just put this in your class:</p>
+<pre>using Phantom;</pre>
+<p>Simple! This causes appear some extension methods in all objects.</p>
+
+<h2>Ok, but what can I do?</h2>
+<p>Get and set properties, invoke methods, get all properties values and more in objects that you don't know the Type. Yes, this is cool!</p>
+<h3>Getting a property value</h3>
+<pre>object person = new Person { Name = "Arthur", Age = 4 };
+
+person.Get("Name");
+
+&gt;&gt; Arthur</pre>
+<h3>Setting a property value</h3>
+<pre>person.Set("Name", "Francine");</pre>
+<h3>Getting all properties values</h3>
+<pre>var properties = person.Values();
+
+foreach(var property in properties)
+{
+    Console.WriteLine(property.Key + " = " + property.Value);
+}
+
+&gt;&gt; Name = Arthur
+&gt;&gt; Age = 4</pre>
+<h3>Good to use with Anonymous Objects</h3>
+<pre>public void PrintName(object target)
+{
+    Console.WriteLine(target.Get("Name"));
+}
+
+PrintName(new { Name = "Wagner" });
+
+&gt;&gt; Wagner</pre>
+<h3>Importing values of another object</h3>
+<pre>object animal = new Animal { Age = 20 };
+
+person.Import(animal);
+
+person.Get("Name");
+person.Get("Age");
+
+&gt;&gt; Arthur
+&gt;&gt; 20</pre>
+
+<h3>Invoke a method</h3>
+<pre>var name = "Francine";
+name.Invoke("ToUpper");
+
+&gt;&gt; FRANCINE</pre>
+<p>There are other utilities.<br>
+That's All Folks… for now!</p>
+        
+            <div id="footer">Wagner Andrade — <a href="http://wagnerandrade.com">http://wagnerandrade.com</a></div>
+        </div>
+    </body>
+</html>
