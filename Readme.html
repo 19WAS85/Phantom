@@ -18,13 +18,15 @@
 
 <h1>Phantom: Easy reflection in .<span class="caps">NET</span></h1>
 <p>Phantom is a helper for use relfection in Microsoft.<span class="caps">NET</span>.</p>
+<p><a href="http://www.wagnerandrade.com/phantom/Phantom.zip">Phantom Download</a></p>
+<p><a href="http://github.com/wagnerandrade/Phantom">Source Code</a></p>
 <h2>How to use it?</h2>
 <p>For begin to use <strong>Phantom</strong> just put this in your class:</p>
+
 <pre>using Phantom;</pre>
 <p>Simple! This causes appear some extension methods in all objects.</p>
-
 <h2>Ok, but what can I do?</h2>
-<p>Get and set properties, invoke methods, get all properties values and more in objects that you don't know the Type. Yes, this is cool!</p>
+<p>Get and set properties, invoke methods, get all properties values and more in objects that you don’t know the Type. Yes, this is cool!</p>
 <h3>Getting a property value</h3>
 <pre>object person = new Person { Name = "Arthur", Age = 4 };
 
@@ -33,6 +35,7 @@ person.Get("Name");
 &gt;&gt; Arthur</pre>
 <h3>Setting a property value</h3>
 <pre>person.Set("Name", "Francine");</pre>
+
 <h3>Getting all properties values</h3>
 <pre>var properties = person.Values();
 
@@ -60,16 +63,16 @@ person.Import(animal);
 person.Get("Name");
 person.Get("Age");
 
+
 &gt;&gt; Arthur
 &gt;&gt; 20</pre>
-
 <h3>Invoke a method</h3>
-<pre>var name = "Francine";
+<pre>object name = "Francine";
 name.Invoke("ToUpper");
 
 &gt;&gt; FRANCINE</pre>
 <p>There are other utilities.<br>
-That's All Folks… for now!</p>
+That’s All Folks… for now!</p></div>
         
             <div id="footer">Wagner Andrade — <a href="http://wagnerandrade.com">http://wagnerandrade.com</a></div>
         </div>
