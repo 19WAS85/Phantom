@@ -2,6 +2,10 @@ h1. Phantom: Easy reflection in .NET
 
 Phantom is a helper for use relfection in Microsoft.NET.
 
+"Phantom Download":http://www.wagnerandrade.com/phantom/Phantom.zip
+
+"Source Code":http://github.com/wagnerandrade/Phantom
+
 h2. How to use it?
 
 For begin to use *Phantom* just put this in your class:
@@ -63,7 +67,7 @@ person.Get("Age");
 
 h3. Invoke a method
 
-<pre>var name = "Francine";
+<pre>object name = "Francine";
 name.Invoke("ToUpper");
 
 >> FRANCINE</pre>
