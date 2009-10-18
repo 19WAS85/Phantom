@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phantom", "Phantom\Phantom.csproj", "{C783270C-BC4D-44EF-BC21-801483F34AEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phantom.Tests", "Phantom.Tests\Phantom.Tests.csproj", "{26050F4E-F2D5-4004-BAF9-E45FDAB47DC7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C783270C-BC4D-44EF-BC21-801483F34AEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C783270C-BC4D-44EF-BC21-801483F34AEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C783270C-BC4D-44EF-BC21-801483F34AEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C783270C-BC4D-44EF-BC21-801483F34AEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26050F4E-F2D5-4004-BAF9-E45FDAB47DC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26050F4E-F2D5-4004-BAF9-E45FDAB47DC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26050F4E-F2D5-4004-BAF9-E45FDAB47DC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26050F4E-F2D5-4004-BAF9-E45FDAB47DC7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

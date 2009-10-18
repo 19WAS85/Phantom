@@ -1,0 +1,72 @@
+h1. Phantom: Easy reflection in .NET
+
+Phantom is a helper for use relfection in Microsoft.NET.
+
+h2. How to use it?
+
+For begin to use *Phantom* just put this in your class:
+
+<pre>using Phantom;</pre>
+
+Simple! This causes appear some extension methods in all objects.
+
+h2. Ok, but what can I do?
+
+Get and set properties, invoke methods, get all properties values and more in objects that you don't know the Type. Yes, this is cool!
+
+h3. Getting a property value
+
+<pre>object person = new Person { Name = "Arthur", Age = 4 };
+
+person.Get("Name");
+
+>> Arthur</pre>
+
+h3. Setting a property value
+
+<pre>person.Set("Name", "Francine");</pre>
+
+h3. Getting all properties values
+
+<pre>var properties = person.Values();
+
+foreach(var property in properties)
+{
+    Console.WriteLine(property.Key + " = " + property.Value);
+}
+
+>> Name = Arthur
+>> Age = 4</pre>
+
+h3. Good to use with Anonymous Objects
+
+<pre>public void PrintName(object target)
+{
+    Console.WriteLine(target.Get("Name"));
+}
+
+PrintName(new { Name = "Wagner" });
+
+>> Wagner</pre>
+
+h3. Importing values of another object
+
+<pre>object animal = new Animal { Age = 20 };
+
+person.Import(animal);
+
+person.Get("Name");
+person.Get("Age");
+
+>> Arthur
+>> 20</pre>
+
+h3. Invoke a method
+
+<pre>var name = "Francine";
+name.Invoke("ToUpper");
+
+>> FRANCINE</pre>
+
+There are other utilities.
+That's All Folks... for now!
